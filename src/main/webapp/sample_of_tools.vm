@@ -1,0 +1,24 @@
+<h2>ContextTool</h2>
+#foreach($key in $context.keys)
+	\$context.key: \$context.value = ${key}: $context.get($key)<br/>
+#end
+<br/>
+
+<h2>ComparisonDateTool</h2>
+$date.format('medium')
+\$date: $date<br/>
+\$date.day: $date.day<br/>
+\$date.month: $date.month<br/>
+\$date.year: $date.year<br/>
+
+<h2>BrowserTool</h2>
+\$browser.version: $browser.version<br/>
+\$browser.OS: $browser.OS<br/>
+
+<h2>CookieTool</h2>
+\$cookies.all: $cookies.all<br/>
+\$cookies: $cookies<br/>
+
+<h2>LinkTool</h2>
+\$link.includeRequestParams: $link.includeRequestParams<br/>
+\$link.requestPath: $link.requestPath<br/>
