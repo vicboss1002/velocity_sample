@@ -1,0 +1,6 @@
+\${boolTrue}: ${boolTrue}<br/>
+\${boolFalse}: ${boolFalse}<br/>
+\${number}: ${number}<br/>
+\${string}: ${string}<br/>
+\${list}: ${list}<br/>
+\${map}: ${map}<br/>

@@ -1,0 +1,15 @@
+## マクロを使って表を作成
+#macro(vmTableRows $map)
+	#foreach($entry in $map.entrySet())
+<tr>
+	<th>$entry.key</th>
+	<td>$entry.value</td>
+</tr>
+	#end
+#end
+
+<table border="1">
+	#vmTableRows({"key1": "value1", "key2": "value2"})
+</table>
+
+#global("test")

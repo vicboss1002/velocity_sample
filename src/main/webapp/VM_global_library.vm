@@ -1,0 +1,4 @@
+## グルーバルマクロ定義ファイル
+#macro(global $a1)
+	<p>global $a1</p>
+#end

@@ -1,0 +1,42 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>Archetype Created Web Application</display-name>
+	<context-param>
+		<param-name>webapp-slf4j-logger.level</param-name>
+		<param-value>debug</param-value>
+	</context-param>
+	<context-param>
+		<param-name>webapp-slf4j-logger.format</param-name>
+		<param-value>%logger [%level] [%ip] %message</param-value>
+	</context-param>
+	<!-- Define Velocity template handler -->
+	<servlet>
+		<servlet-name>velocity</servlet-name>
+<!-- 		<servlet-class> -->
+<!-- 			org.apache.velocity.tools.view.VelocityViewServlet -->
+<!-- 		</servlet-class> -->
+		<servlet-class>velocity_sample.MyVelocityViewServlet</servlet-class>
+
+		<!-- Unless you plan to put your tools.xml and velocity.properties under 
+			different folders or give them different names, then these two init-params 
+			are unnecessary. The VelocityViewServlet will automatically look for these 
+			files in the following locations. -->
+		<init-param>
+			<param-name>org.apache.velocity.toolbox</param-name>
+			<param-value>/WEB-INF/tools.xml</param-value>
+		</init-param>
+		<init-param>
+			<param-name>org.apache.velocity.properties</param-name>
+			<param-value>/WEB-INF/velocity.properties</param-value>
+		</init-param>
+	</servlet>
+
+	<!-- Map *.vm files to Velocity -->
+	<servlet-mapping>
+		<servlet-name>velocity</servlet-name>
+		<url-pattern>*.vm</url-pattern>
+	</servlet-mapping>
+</web-app>
